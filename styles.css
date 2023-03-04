@@ -1,2 +1,36 @@
+.calculator{
+    max-width: 400px;
+    margin: 10vh auto 0 auto;
+    box-shadow: 0px 0px 43px 17px rgba(153, 153, 153, 1);
+}
 
-/* Your CSS Code here. */
+.display{
+    text-align: right;
+    height: 70px;
+    line-height: 70px;
+    padding: 16px 8px;
+    font-size: 25px;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.button{
+    border: 0.5px solid #999;
+    text-align: center;
+    line-height: 70px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#ans{
+    color: white;
+    background-color: #5555ff;
+}
+
+.button:hover{
+    background-color: #ccc;
+    transition: 0.3s ease-in-out;
+}
