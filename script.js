@@ -2,25 +2,30 @@ const display = document.querySelector('.display');
 const buttons = document.querySelectorAll('.button');
 
 const btns = Array.from(buttons);
- 
-btns.map( button =>{
-    button.addEventListener('click', (e)=>{
-        switch(e.target.innerText){
-            case 'C': 
-                display.innerText = '';
+
+btns.map(button => {
+    button.addEventListener('click', (e) => {
+        switch (e.target.innerHTML) {
+
+            case 'C':
+                display.innerHTML = '';
                 break;
 
             case '←':
-                display.innerText = display.innerText.slice(0,-1);
-                break;  
-                
-            case '=':
-                display.innerText = eval(display.innerText);    
+                display.innerHTML = display.innerHTML.slice(0, -1);
                 break;
-                
+
+            case '=':
+                try {
+                    display.innerHTML = eval(display.innerHTML);
+                } catch {
+                    display.innerHTML = 'Bad Expression';
+                }
+                break;
+
             default:
-                display.innerText += e.target.innerText;
-            
+                display.innerHTML += e.target.innerHTML;
+
         }
     })
 })
