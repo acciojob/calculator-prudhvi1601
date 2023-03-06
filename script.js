@@ -1,4 +1,4 @@
-const display = document.querySelector('.display');
+const display = document.querySelector('#input');
 const buttons = document.querySelectorAll('.button');
 
 const btns = Array.from(buttons);
