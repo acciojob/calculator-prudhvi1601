@@ -8,7 +8,7 @@ btns.map(button => {
         switch (e.target.innerHTML) {
 
             case 'C':
-                display.innerHTML = '';
+                display.innerHTML = "";
                 break;
 
             case '←':
@@ -19,13 +19,13 @@ btns.map(button => {
                 try {
                     display.innerHTML = eval(display.innerHTML);
                 } catch {
-                    display.innerHTML = 'Bad Expression';
+                    display.innerHTML = "Bad Expression";
                 }
                 break;
 
             default:
                 display.innerHTML += e.target.innerHTML;
-
+                break;
         }
     })
 })
